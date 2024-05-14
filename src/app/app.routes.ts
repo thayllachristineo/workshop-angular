@@ -11,15 +11,11 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('./home/home.component').then(
-        (component) => component.HomeComponent
-      ),
+      import('home').then((component) => component.HomeComponent),
   },
   {
     path: 'users',
     loadComponent: () =>
-      import('./users/users.component').then(
-        (component) => component.UsersComponent
-      ),
+      import('users').then((component) => component.UsersComponent),
   },
 ];
