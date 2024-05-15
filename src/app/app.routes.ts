@@ -17,5 +17,12 @@ export const routes: Routes = [
     path: 'users',
     loadComponent: () =>
       import('users').then((component) => component.UsersComponent),
+    children: [
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('users').then((component) => component.UserDetailComponent),
+      },
+    ],
   },
 ];
